@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int a,b;
+    scanf("%d%d",&a,&b);
+    if(b==0)
+    {
+        printf("second no cannot be zero");
+        b=1;
+    }
+        int r=a/b;
+        printf("%d",r);
+    return 0;
+}
+output:
+  10
+  5
+  2
