@@ -1,0 +1,50 @@
+Write a Python program to find the sum of the series 2 +22 + 222 + 2222 + .. n terms
+
+Input Format
+
+Line 1:
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Sample Input 0
+
+5
+Sample Output 0
+
+24690
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+    int n,sumseries=0,currentterm = 0;
+8
+    scanf("%d",&n);
+9
+    for(int i=1;i<=n;i++) {
+10
+        currentterm=currentterm * 10 + 2;
+11
+        sumseries+=currentterm;
+12
+    }
+13
+    printf("%d\n",sumseries);
+14
+    return 0;
+15
+}
+16
