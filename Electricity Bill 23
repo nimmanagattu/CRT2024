@@ -1,0 +1,92 @@
+Electricity board has decided to charge rupees based on the units consumed by a particular home. If the units consumed is less than or equal to 200, the cost for one unit is 0.5. If the unit is less than or equal to 400, the cost for one unit is 0.65 and Rs.100 extra charge. If the unit is less than or equal to 600, the cost for one unit is 0.80 and Rs.200 extra charge. If the unit is greater than 600 the cost for one unit is 1.25 and Rs.425 extra charge. You need to now calculate the electricity bill based on the units consumed (given input).
+
+Input Format
+
+Input consists of one integer. This corresponds to the units consumed.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+The output consists of one integer. This corresponds to the electricity bill in rupees.
+
+Sample Input 0
+
+200
+Sample Output 0
+
+Rs.100
+Submissions: 134
+Max Score: 20
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+​
+2
+#include <stdio.h>
+3
+​
+4
+int calculate_electricity_bill(int units) {
+5
+    int bill = 0;
+6
+​
+7
+    if (units <= 200) {
+8
+        bill = units * 0.5;
+9
+    } else if (units <= 400) {
+10
+        bill = units * 0.65 + 100;
+11
+    } else if (units <= 600) {
+12
+        bill = units * 0.80 + 200;
+13
+    } else {
+14
+        bill = units * 1.25 + 425;
+15
+    }
+16
+​
+17
+    return bill;
+18
+}
+19
+​
+20
+int main() {
+21
+    int units;
+22
+    scanf("%d", &units);
+23
+​
+24
+    int bill = calculate_electricity_bill(units);
+25
+​
+26
+    printf("Rs.%d\n", bill);
+27
+​
+28
+    return 0;
+29
+}
+30
+​
+31
+​
+32
+​
