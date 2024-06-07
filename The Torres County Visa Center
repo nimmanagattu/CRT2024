@@ -1,0 +1,48 @@
+The Torres county visa center generates the token number for its applicants from their application ID. The application ID is a numeric value. The token number generated in a specific form. The even digits in the applicant’s ID are replaced by the digit one greater then the even digit and the odd digits in the applicant’s ID are replaced by the digit one less than the odd digit. The numeric value thus generated represents the taken number of the applicant.
+
+Input Format
+
+The input consists of an integer – applicantID, representing the application ID of the applicant.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print an integer representing the token number.
+
+Sample Input 0
+
+245567
+Sample Output 0
+
+354476
+Explanation 0
+
+The first digit in the application ID is ‘2’ i.e., even, it is replaced by one greater digit i.e. 3. The second digit in the application ID is ‘4’ i.e., even, it is replaced by one greater digit i.e. 5. The third digit in the application ID is ‘5’ i.e., odd, it is replaced by one lesser digit i.e. 4 and so on. Hence the output is: 354476
+
+Sample Input 1
+
+99123
+Sample Output 1
+
+88032
+#include <stdio.h>
+int main() {
+    int applicantID, token = 0, placeValue = 1;
+    scanf("%d", &applicantID);
+    while (applicantID > 0) {
+        int digit = applicantID % 10;
+        if (digit % 2 == 0) {
+            token += (digit + 1) * placeValue;
+        } else {
+            token += (digit - 1) * placeValue;
+        }
+        placeValue *= 10;
+        applicantID /= 10;
+    }
+    printf("%d", token);
+    
+    return 0;
+}
