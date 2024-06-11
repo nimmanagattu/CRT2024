@@ -1,0 +1,72 @@
+Write a program to sort the given array in ascending order.
+
+Input Format
+
+Read size of the array Read elements of the array line by line
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print elements of the array in asecending order
+
+Sample Input 0
+
+5
+54
+68
+25
+14
+74
+Sample Output 0
+
+14
+25
+54
+68
+74
+Sample Input 1
+
+4
+51
+-3
+5
+-6
+Sample Output 1
+
+-6
+-3
+5
+51
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+int n;
+scanf("%d",&n);
+int a[n],i,j,t;
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+for(i=0;i<n-1;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(a[i]>a[j])
+{
+t=a[i];
+a[i]=a[j];
+a[j]=t;
+}
+}
+}
+for(i=0;i<n;i++){
+printf("%d\n",a[i]);
+}
+    return 0;
+}
