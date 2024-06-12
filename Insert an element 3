@@ -1,0 +1,139 @@
+Write a program to insert an element in an array at the given position. If the position where the element is to be inserted is greater than the size of the array display “Invalid Input”.
+
+Input Format
+
+The first integer corresponds to the size of the array. Read n elements into an array line by line Next integer corresponds to the position where the element is to be inserted. Next integer corresponds to the element to be inserted.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print array after insertion
+
+Sample Input 0
+
+5
+1
+2
+3
+4
+5
+4
+10
+Sample Output 0
+
+1
+2
+3
+10
+4
+5
+Sample Input 1
+
+4
+12
+55
+24
+65
+8
+22
+Sample Output 1
+
+Invalid Input
+Sample Input 2
+
+6
+23
+55
+12
+87
+44
+22
+3
+99
+Sample Output 2
+
+23
+55
+99
+12
+87
+44
+22
+Submissions: 267
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+=
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+​
+8
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+9
+    int n;
+10
+    scanf("%d",&n);
+11
+    int a[n+1],val,pos,i;
+12
+    for(i=0;i<n;i++)
+13
+    {
+14
+        scanf("%d",&a[i]);
+15
+    }
+16
+    scanf("%d%d",&pos,&val);
+17
+    if(pos>n){
+18
+printf("Invalid Input");
+19
+    }
+20
+    else
+21
+    {
+22
+      for(i=n;i>=pos;i--) {
+23
+             a[i]=a[i-1];   
+24
+      }
+25
+       a[pos-1]=val; 
+26
+    for(i=0;i<=n;i++){
+27
+        printf("%d\n",a[i]);
+28
+    }
+29
+    
+30
+}
+31
+    return 0;
+32
+}
+33
+​
