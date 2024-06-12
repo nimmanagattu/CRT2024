@@ -1,0 +1,98 @@
+Write a program to find the sum of elements in each row.
+
+Input Format
+
+Integers correspond to the size of rows and columns. Read elements of the array
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Sum of each row in seperate line
+
+Sample Input 0
+
+3
+3
+1 2 3
+7 3 1
+7 4 1
+Sample Output 0
+
+6
+11
+12
+Sample Input 1
+
+4
+3
+1 2 3
+4 5 6
+7 8 9
+4 3 8
+Sample Output 1
+
+6
+15
+24
+15
+Submissions: 140
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+​
+2
+#include <stdio.h>
+3
+int main() {
+4
+    int rows,cols,i,j;
+5
+    scanf("%d%d",&rows,&cols);  
+6
+    int a[rows][cols];
+7
+    for(i=0;i<rows;i++) {
+8
+        for(j=0;j<cols;j++) {
+9
+            scanf("%d",&a[i][j]);
+10
+        }
+11
+    }
+12
+    
+13
+    for(i=0;i<rows;i++) {
+14
+        int s=0;
+15
+        for(j=0;j<cols;j++) {
+16
+            s+=a[i][j];
+17
+        }
+18
+        printf("%d\n",s);
+19
+    }
+20
+    
+21
+    return 0;
+22
+}
+23
+​
+24
+​
+25
+​
