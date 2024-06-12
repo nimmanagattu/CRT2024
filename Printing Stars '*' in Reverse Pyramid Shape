@@ -1,0 +1,92 @@
+Printing Stars '*' in Reverse Pyramid Shape
+
+Input Format
+
+Read n value
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Printing Stars '*' in Reverse Pyramid Shape
+
+Sample Input 0
+
+5
+Sample Output 0
+
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+Sample Input 1
+
+11
+Sample Output 1
+
+* * * * * * * * * * * 
+ * * * * * * * * * * 
+  * * * * * * * * * 
+   * * * * * * * * 
+    * * * * * * * 
+     * * * * * * 
+      * * * * * 
+       * * * * 
+        * * * 
+         * * 
+          * 
+Submissions: 55
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
++1
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+int main() {
+6
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+7
+    int i,j,k,n;
+8
+    scanf("%d",&n);
+9
+        for(i=1;i<n+1;i++)
+10
+        {
+11
+           for(k=1;k<i;k++) 
+12
+           printf(" ");
+13
+            for(j=i;j<n+1;j++)
+14
+            {
+15
+                printf("* ");
+16
+            }
+17
+            printf("\n");
+18
+        }
+19
+return 0;
+20
+}
+21
+​
+22
