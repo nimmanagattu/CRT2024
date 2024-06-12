@@ -1,0 +1,121 @@
+Write a program for Matrix Addition
+
+Input Format
+
+Enter row size Enter column size Enter elements for first matrix line by line Enter elements for second matrix line by line
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Addition of a matrix
+
+Sample Input 0
+
+2
+2
+1
+2
+3
+4
+1
+2
+3
+4
+Sample Output 0
+
+2 4
+6 8
+Sample Input 1
+
+2
+3
+1
+2
+3
+4
+5
+6
+6
+5
+4
+3
+2
+1
+Sample Output 1
+
+7 7 7
+7 7 7
+Submissions: 135
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+j
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+​
+8
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+9
+    int n,m,i,j;
+10
+            scanf("%d%d",&n,&m);
+11
+    int a[n][m],b[n][m];
+12
+    int s[n][m];
+13
+    for(i=0;i<n;i++){
+14
+        for(j=0;j<m;j++){
+15
+               scanf("%d",&a[i][j]); 
+16
+        }
+17
+    }
+18
+    for(i=0;i<n;i++){
+19
+        for(j=0;j<m;j++){
+20
+               scanf("%d",&b[i][j]);
+21
+        }
+22
+    }
+23
+    for(i=0;i<n;i++){
+24
+        for(j=0;j<m;j++){
+25
+            s[i][j]=a[i][j]+b[i][j];
+26
+            printf("%d ",s[i][j]);
+27
+        }
+28
+        printf("\n");
+29
+        }
+30
+return 0;
+31
+    }
