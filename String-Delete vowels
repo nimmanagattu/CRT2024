@@ -1,0 +1,92 @@
+Write a program to delete the vowels in the given string and display the string without vowels.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+Print string without vowels
+
+Sample Input 0
+
+java
+Sample Output 0
+
+jv
+Sample Input 1
+
+python
+Sample Output 1
+
+pythn
+Submissions: 244
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+​
+8
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+9
+    char str[50];
+10
+    int i,j,len;
+11
+    scanf("%s", str);//gets(str);
+12
+    len=strlen(str);
+13
+    for(i=0;i<len;i++){
+14
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
+15
+            str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U')
+16
+        {
+17
+            for(j=i;j<len;j++)
+18
+            {
+19
+                str[j]=str[j+1];
+20
+            }
+21
+            i--;
+22
+            len--;
+23
+        }
+24
+        str[len+1] = '\0';
+25
+    }
+26
+   printf("%s",str);  
+27
+    return 0;
+28
+}
+29
+​
