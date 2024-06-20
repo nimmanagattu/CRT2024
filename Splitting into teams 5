@@ -1,0 +1,86 @@
+During the Physical Education hour, PT sir has decided to conduct some team games. He wants to split the students in the class into equal-sized teams. In some cases, there may be some students who are left out from teams and he wanted to use the left out, students, to assist him in conducting the team games. For instance, if there are 50 students in the class and if the class has to be divided into 7 equal-sized teams, 7 students will be there in each team and 1 student will be left out. PT sir asks your help to automate this team splitting task. Can you please help him out?
+
+Input Format
+
+Input consists of 2 integers. The first integer corresponds to the number of students in the class. The second integer corresponds to the number of teams.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Output consists of 2 integers. The first integer corresponds to the number of students in the each team. The second integer corresponds to the remaining students.
+
+Sample Input 0
+
+60
+8
+Sample Output 0
+
+The number of students in each team is 7 and left out is 4
+Sample Input 1
+
+78
+6
+Sample Output 1
+
+The number of students in each team is 13 and left out is 0
+Sample Input 2
+
+40
+6
+Sample Output 2
+
+The number of students in each team is 6 and left out is 4
+Sample Input 3
+
+80
+3
+Sample Output 3
+
+The number of students in each team is 26 and left out is 2
+Submissions: 819
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+import java.text.*;
+4
+import java.math.*;
+5
+import java.util.regex.*;
+6
+​
+7
+public class Solution {
+8
+​
+9
+    public static void main(String[] args) {
+10
+        int n,t,c,d;
+11
+        Scanner sc=new Scanner(System.in);
+12
+    n=sc.nextInt();
+13
+        t=sc.nextInt();
+14
+    c=n/t;
+15
+    d=n%t;
+16
+    System.out.println("The number of students in each team is "+c+" and left out is "+d+"");
+17
+    }
+18
+}
