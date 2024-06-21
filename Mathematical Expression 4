@@ -1,0 +1,115 @@
+The expression will be one of the following expressions:
+
+A + B = C, A - B = C and A * B = C.
+
+where A, B, C are three numbers, S is the sign between A and B, and Q is the '=' sign.
+
+If the expression is right print "Yes", Otherwise print the right answer of the expression.
+
+Input Format
+
+The first line contains the number of test cases t.
+
+The following lines contain t test cases. One test case per line.
+
+Each test case is in the format A S B Q C, where A,B and C are the numbers, S is the sign between A and B and Q is the '=' sign.
+
+Constraints
+
+1<= T <= 105
+
+0<= A,B <= 102
+
+-105 <= C <=105
+
+Output Format
+
+Print the result of each test case in a new line.
+
+In each test case, If the expression is right print "Yes", Otherwise print the right answer of the expression.
+
+Sample Input 0
+
+2
+5 + 10 = 15
+2 * 10 = 19
+Sample Output 0
+
+Yes
+20
+Submissions: 171
+Max Score: 10
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+public class Solution {
+4
+       public static void main(String[] args) {
+5
+Scanner sc=new Scanner(System.in);
+6
+int t=sc.nextInt();
+7
+for(int i=1;i<=t;i++)
+8
+{
+9
+int a=sc.nextInt();
+10
+char ch=sc.next().charAt(0);
+11
+int b=sc.nextInt();
+12
+sc.next().charAt(0);
+13
+ int c=sc.nextInt();  
+14
+ switch(ch) {
+15
+  case '+':if(a+b==c)
+16
+     System.out.println("Yes");
+17
+      else
+18
+    System.out.println(a+b);
+19
+     break;
+20
+     case '-':if(a-b==c)
+21
+    System.out.println("Yes");
+22
+     else
+23
+  System.out.println(a-b);
+24
+break;
+25
+  case '*':if(a*b==c)
+26
+     System.out.println("Yes");
+27
+    else
+28
+    System.out.println(a*b);
+29
+    break;
+30
+        
+31
+ }
+32
+}
+33
+}
+34
+}
