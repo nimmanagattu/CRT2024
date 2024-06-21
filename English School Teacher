@@ -1,0 +1,94 @@
+An English school teacher is teaching how to build sentences for kindergarten students. She starts by teaching two words in a sentence, then 3 words and so on. The next step is that she asks the students to find which word in the sentence they have made has the maximum number of alphabets. The task here is to write program to find the longest word in each input sentence(str).
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+print the highest word length
+
+Sample Input 0
+
+Knowledge is the greatest gift
+Sample Output 0
+
+9
+Explanation 0
+
+Word No. of characters Knowledge 9 Is 2 The 3 Greatest 8 Gift 4
+
+Sample Input 1
+
+Java is object oriented programming language
+Sample Output 1
+
+11
+Sample Input 2
+
+11223##%%5566778899 Saturn V rocket���s  first stage carries 203,400 gallons (770,000 litres) of kerosene fuel
+Sample Output 2
+
+19
+Submissions: 84
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+int find_longest_word_length(char *sentence) {
+6
+    int max_length = 0;
+7
+    char *token = strtok(sentence, " ");
+8
+    while (token!= NULL) {
+9
+        int length = strlen(token);
+10
+        if (length > max_length) {
+11
+            max_length = length;
+12
+        }
+13
+        token = strtok(NULL, " ");
+14
+    }
+15
+    return max_length;
+16
+}
+17
+int main() {
+18
+    char sentence[1000];
+19
+    fgets(sentence, sizeof(sentence), stdin);
+20
+    sentence[strcspn(sentence, "\n")] = 0; 
+21
+    int longest_word_length = find_longest_word_length(sentence);
+22
+    printf("%d\n", longest_word_length);
+23
+​
+24
+    return 0;
+25
+} 
