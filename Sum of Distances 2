@@ -1,0 +1,75 @@
+Write a program to calculate and return the sum of distances between the adjacent numbers In an array of positive integers.
+
+Input Format
+
+Read size of the array Read n elements of the array side by side
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print sum of positive distances
+
+Sample Input 0
+
+5
+10 11 7 12 14
+Sample Output 0
+
+12
+Explanation 0
+
+The first parameters (5) is the size of the array next is an array of integers the total of distance is 12 as per the calculation below. 10-11=1 11-7=4 7-12=5 12-14=2 Total distance-1+4+5+2=12
+
+Sample Input 1
+
+6
+12 15 8 20 32 16
+Sample Output 1
+
+50
+Submissions: 258
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+int main() {
+6
+    int n;
+7
+    scanf("%d", &n);
+8
+    int arr[n];
+9
+    for (int i = 0; i < n; i++) {
+10
+        scanf("%d", &arr[i]);
+11
+    }
+12
+    int sum = 0;
+13
+    for (int i = 0; i < n - 1; i++) {
+14
+        sum += abs(arr[i] - arr[i + 1]);
+15
+    }
+16
+    printf("%d\n", sum);
+17
+    return 0;
+}
