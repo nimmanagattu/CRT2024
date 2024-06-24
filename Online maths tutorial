@@ -1,0 +1,48 @@
+In an online maths tutorial a student is given a list of N numbers. From this list, the student is required to sum each element in the list such that the ith element in the output list will be equal to the sum to the first element until the ith element in the list.
+
+Input Format
+
+The first line of input consists of an integer – numSize representing the count of total numbers in the list(N). The next line consists of N space separated integers. element1, element2,…… element-n representing the numeric value in the list.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print the elements
+
+Sample Input 0
+
+5
+1 4 2 6 3
+Sample Output 0
+
+1 5 7 13 16
+Explanation 0
+
+The sum of each element 1, (1+4=5), (1+4+2=7), (1+4+2+6=13), (1+4+2+6+3=16). Hence the output is 1 5 7 13 16.
+
+Sample Input 1
+
+8
+5 24 11 43 24 66 10 40
+Sample Output 1
+
+5 29 40 83 107 173 183 223
+#include <stdio.h>
+int main() {
+    int numSize;
+    scanf("%d", &numSize);
+    int arr[numSize];
+    for (int i = 0; i < numSize; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int sum = 0;
+    for (int i = 0; i < numSize; i++) {
+        sum += arr[i];
+        printf("%d ", sum);
+    }
+    printf("\n");
+ return 0;
+}
