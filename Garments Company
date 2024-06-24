@@ -1,0 +1,80 @@
+The garments company Apparel wishes to open outlets at various locations. The company shortlisted several plots in these locations and wishes to select only plots that are square- shaped. Write an algorithm to help Apparel find the number of plots that it can select for its outlets.
+
+Input Format
+
+The first line of the input consists of an integer num0fMots, representing the number of plots shortlisted by the company for outlets (N). The second line consists of N space-separated integers – areal, areal, ….., areaN representing the area of the N plots selected for outlets.
+
+Constraints
+
+0 < num0fPlots < 10^6 0 < area < 10^6 0 < i < num0fPlots
+
+Output Format
+
+Print an integer representing the number of plots that will be selected for outlets.
+
+Sample Input 0
+
+8
+79 77 54 81 48 34 25 16
+Sample Output 0
+
+3
+Explanation 0
+
+The areas that are in square form are 81, 25 and 16. So, the output is 3.
+
+Sample Input 1
+
+6
+12 36 49 64 21 9
+Sample Output 1
+
+4
+Submissions: 195
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+int main() {
+6
+    int n;
+7
+    scanf("%d", &n);
+8
+    int count = 0;
+9
+    for (int i = 0; i < n; i++) {
+10
+        int area;
+11
+        scanf("%d", &area);
+12
+        int root = sqrt(area);
+13
+        if (root * root == area) {
+14
+            count++;
+15
+        }
+16
+    }
+17
+    printf("%d\n", count);
+18
+    return 0;
+19
+}
+20
+    
