@@ -1,0 +1,154 @@
+Andrew is a stock trader who trades in N selected stocks. He has calculated the relative stock price changes in the N stocks from the previous day stock prices. Now, his lucky number is K, so he wishes to invest in the particular stock that has Kth smallest relative stock value. Write an algorithm for Andrew to find the Kth smallest stock price out of the selected N stocks.
+
+Input Format
+
+The first line of the input consists of two space-separated integers – numOfStocks and valuek, representing the number of selected stocks (N) And the value K for which he wishes to find the stock price, respectively. The second line consists of N space-separated integers – stock1, stock2, ……, stock N representing the relative stock prices of the selected stocks.
+
+Constraints
+
+1<=n<10^7
+
+Output Format
+
+Print an integer representing the Kth smallest stock price of selected N stocks.
+
+Sample Input 0
+
+7 5
+9 -3 8 -6 -7 18 10
+Sample Output 0
+
+9
+Explanation 0
+
+The sorted relative stock prices are [-7, -6, -3, 8, 9, 10, 18] So, the 5th smallest stock price is 9.
+
+Sample Input 1
+
+6 3
+10 21 33 44 18 28
+Sample Output 1
+
+21
+Submissions: 250
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include <stdio.h>
+2
+void swap(int* a, int* b) {
+3
+    int temp = *a;
+4
+    *a = *b;
+5
+    *b = temp;
+6
+}
+7
+void quickSelect(int arr[], int low, int high, int k) {
+8
+    if (low == high) {
+9
+        return;
+10
+    }
+11
+​
+12
+    int pivot = arr[low];
+13
+    int i = low + 1;
+14
+    int j = high;
+15
+​
+16
+    while (1) {
+17
+        while (i <= high && arr[i] <= pivot) {
+18
+            i++;
+19
+        }
+20
+​
+21
+        while (j >= low && arr[j] > pivot) {
+22
+            j--;
+23
+        }
+24
+​
+25
+        if (i <= j) {
+26
+            swap(&arr[i], &arr[j]);
+27
+        } else {
+28
+            break;
+29
+        }
+30
+    }
+31
+​
+32
+    swap(&arr[low], &arr[j]);
+33
+​
+34
+    if (j == k - 1) {
+35
+        return;
+36
+    } else if (j < k - 1) {
+37
+        quickSelect(arr, j + 1, high, k);
+38
+    } else {
+39
+        quickSelect(arr, low, j - 1, k);
+40
+    }
+41
+}
+42
+​
+43
+int main() {
+44
+    int n, k;
+45
+    scanf("%d %d", &n, &k);
+46
+​
+47
+    int arr[n];
+48
+    for (int i = 0; i < n; i++) {
+49
+        scanf("%d", &arr[i]);
+50
+    }
+51
+​
+52
+    quickSelect(arr, 0, n - 1, k);
+53
+​
+54
+    printf("%d\n", arr[k - 1]);
+55
+​
+56
+    return 0;
+57
+}
