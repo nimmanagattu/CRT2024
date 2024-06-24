@@ -1,0 +1,105 @@
+In a science research lab, combining two nuclear chemicals produces a maximum energy that is the product of the energy of the two chemicals. The energy values of the chemicals can be negative or positive. The scientist wishes to calculate the sum of the maximized energies of the two elements when the reaction happens. Write an algorithm to find the total energy produced by the chemicals when the reaction happens.
+
+Input Format
+
+The first line of the input consists of an integer numOfChem, representing the number of chemicals (N). The second line consists of N space-separated integers – enerp ener2, , enerN representing the energies of the chemicals.
+
+Constraints
+
+0 < num0fChem <=10^6
+
+Output Format
+
+Print an integer representing the total energy produced by the chemicals when the reaction happens.
+
+Sample Input 0
+
+7
+9 -3 8 -6 -7 8 10
+Sample Output 0
+
+19
+Explanation 0
+
+Mixing of Highest and second highest chemicals
+
+Sample Input 1
+
+5
+23 11 44 22 18
+Sample Output 1
+
+67
+Submissions: 201
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
++
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+    int n;
+8
+    scanf("%d", &n);
+9
+​
+10
+    int arr[n];
+11
+    for (int i = 0; i < n; i++) {
+12
+        scanf("%d", &arr[i]);
+13
+    }
+14
+​
+15
+    int max1 = arr[0];
+16
+    int max2 = arr[0];
+17
+​
+18
+    for (int i = 1; i < n; i++) {
+19
+        if (arr[i] > max1) {
+20
+            max2 = max1;
+21
+            max1 = arr[i];
+22
+        } else if (arr[i] > max2 && arr[i]!= max1) {
+23
+            max2 = arr[i];
+24
+        }
+25
+    }
+26
+​
+27
+    printf("%d\n", max1 + max2);
+28
+​
+29
+    return 0;
+30
+}
+31
+    
+32
+​
