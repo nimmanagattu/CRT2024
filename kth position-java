@@ -1,0 +1,24 @@
+Input:read size of the array and kth position value
+read ele of the array
+output:
+print kth smallest ele
+Sample Input:
+6 3
+32 12 35 23 41 22
+sample output:
+23
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+Arrays.sort(array);
+System.out.println(arr[k-1]);
+  }
+}
