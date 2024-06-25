@@ -1,0 +1,39 @@
+input:read size of array
+read building heights based on array size
+output:
+to count the no. of buildings to see the sunrise
+import java.util.*;
+class Test
+{
+public static void main(String args[])
+{
+Scanner sc = new Scanner(System.in);
+int h=sc.nextInt();
+int a[]=new int[h];
+int count=0;
+for(int i=0;i<h;i++)
+{
+    a[i]=sc.nextInt();
+}
+for(int i=0;i<h;i++)
+{
+ if(a[i]>=a[0])
+ {
+     count++;
+ }
+}
+System.out.print(count);
+}
+}
+5
+6 2 7 4 10
+3
+
+
+
+
+
+
+
+
+
