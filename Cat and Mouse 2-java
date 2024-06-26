@@ -1,0 +1,106 @@
+Two cats and a mouse are at various positions on a line. You will be given their starting positions. Your task is to determine which cat will reach the mouse first, assuming the mouse doesn’t move and the cats travel at equal speed. If the cats arrive at the same time, the mouse will be allowed to move and it will escape while they fight. You are given q queries in the form of x ,y and ,z representing the respective positions for cats A and B and for mouse C . Complete the function catAndMouse to return the appropriate answer to each query, which will be printed on a new line.
+
+If cat A catches the mouse first, print Cat A. If cat B catches the mouse first, print Cat B. If both cats reach the mouse at the same time, print Mouse Cas the two cats fight and mouse escapes. For example, cat A is at position x=2 and cat B is at y=5 . If mouse C is at position z=4,It is 2 units from cat A and 1 unit from cat B. Cat B will catch the mouse.
+
+Function Description Complete the catAndMouse function in the editor below. It should return one of the three strings as described.
+
+catAndMouse has the following parameter(s): x: an integer, Cat A‘s position y: an integer, Cat B’s position z: an integer, Mouse C‘s position
+
+Input Format
+
+The first line contains a single integer q, denoting the number of queries. Each of the q subsequent lines contains three space-separated integers describing the respective values of x (catA ‘s location) ,y (catB ‘s location), and z (mouse C’s location).
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+For each query, return Cat A if cat A catches the mouse first, Cat B if cat B catches the mouse first, or Mouse C if the mouse escapes.
+
+Sample Input 0
+
+2
+1 2 3
+1 3 2
+Sample Output 0
+
+Cat B
+Mouse C
+Sample Input 1
+
+3
+2 8 3
+6 2 4
+7 1 5
+Sample Output 1
+
+Cat A
+Mouse C
+Cat A
+Submissions: 80
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+import java.text.*;
+4
+import java.math.*;
+5
+import java.util.regex.*;
+6
+public class Main {
+7
+    public static void main(String[] args) {
+8
+        Scanner sc = new Scanner(System.in);
+9
+        int q = sc.nextInt();
+10
+        for (int i = 0; i < q; i++) {
+11
+            int x = sc.nextInt();
+12
+            int y = sc.nextInt();
+13
+            int z = sc.nextInt();
+14
+            System.out.println(catAndMouse(x, y, z));
+15
+        }
+16
+    }
+17
+    public static String catAndMouse(int x, int y, int z) {
+18
+        int distanceA = Math.abs(x - z);
+19
+        int distanceB = Math.abs(y - z);
+20
+        if (distanceA < distanceB) {
+21
+            return "Cat A";
+22
+        } else if (distanceA > distanceB) {
+23
+            return "Cat B";
+24
+        } else {
+25
+            return "Mouse C";
+26
+        }
+27
+    }
+28
+}
+29
+​
