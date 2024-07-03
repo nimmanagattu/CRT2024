@@ -1,0 +1,72 @@
+Write a program to sort the given string.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+print the ascending order of given string.
+
+Sample Input 0
+
+god
+Sample Output 0
+
+dgo
+Sample Input 1
+
+python
+Sample Output 1
+
+hnopty
+Submissions: 280
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+        Scanner sc=new Scanner(System.in);
+8
+        String n = sc.next();
+9
+        for (char c='a';c<='z';c++) {
+10
+            int i=0;
+11
+            while(i<n.length()) {
+12
+                if(n.charAt(i)== c) {
+13
+                    System.out.print(c);
+14
+                }
+15
+                i++;
+16
+            }
+17
+        }
+18
+    }
+19
+}
