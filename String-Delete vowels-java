@@ -1,0 +1,85 @@
+Write a program to delete the vowels in the given string and display the string without vowels.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+Print string without vowels
+
+Sample Input 0
+
+java
+Sample Output 0
+
+jv
+Sample Input 1
+
+python
+Sample Output 1
+
+pythn
+Submissions: 261
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+}
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+        Scanner sc = new Scanner(System.in); 
+8
+        String s = sc.nextLine(); 
+9
+        for (int i = 0; i < s.length(); i++) 
+10
+        { 
+11
+            if (s.charAt(i) == 'a' || s.charAt(i) == 'e'
+12
+                || s.charAt(i) == 'i' || s.charAt(i) == 'o'
+13
+                || s.charAt(i) == 'u' || s.charAt(i) == 'A'
+14
+                || s.charAt(i) == 'E' || s.charAt(i) == 'I'
+15
+                || s.charAt(i) == 'O'
+16
+                || s.charAt(i) == 'U') 
+17
+            { 
+18
+                continue; 
+19
+            } 
+20
+            else { 
+21
+                System.out.print(s.charAt(i));
+22
+    }
+23
+}
+24
+    }
+25
+}
