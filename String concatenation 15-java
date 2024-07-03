@@ -1,0 +1,56 @@
+Write a program to find the concatenation of the given two strings
+
+Input Format
+
+Input consists of 2 strings.
+
+Constraints
+
+string
+
+Output Format
+
+print result string
+
+Sample Input 0
+
+Sun
+Microsystems
+Sample Output 0
+
+Sun Microsystems
+Sample Input 1
+
+Oracle
+Corporation
+Sample Output 1
+
+Oracle Corporation
+Submissions: 519
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.util.Scanner;
+2
+public class Main {
+3
+    public static void main(String[] args) {
+4
+        Scanner sc = new Scanner(System.in);
+5
+        String str1 = sc.nextLine();
+6
+        String str2 = sc.nextLine();
+7
+        String str3 = str1 + " " + str2;
+8
+        System.out.println(str3);
+9
+    }
+10
+}
