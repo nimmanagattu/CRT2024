@@ -1,0 +1,84 @@
+Write a program to Rotate the string in the specified direction and print the output.
+
+Input Format
+
+First line contains the String A. Second line contains the number of positions you have to shift the elements in the string. Third line contains the direction either 'L' or 'R'.
+
+Constraints
+
+1<=len(A)<1000
+
+Output Format
+
+Print the rotated string
+
+Sample Input 0
+
+javalang
+3
+L
+Sample Output 0
+
+alangjav
+Sample Input 1
+
+javalang
+3
+R
+Sample Output 1
+
+angjaval
+Sample Input 2
+
+welcome
+5
+L
+Sample Output 2
+
+mewelco
+Submissions: 94
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+        Scanner sc=new Scanner(System.in);
+8
+        String str = sc.next();
+9
+        int n = sc.nextInt();
+10
+        char dir = sc.next().charAt(0);
+11
+        if (dir == 'L') {
+12
+            System.out.println(str.substring(n) + str.substring(0, n));
+13
+        } else {
+14
+            System.out.println(str.substring(str.length() - n) + str.substring(0, str.length() - n));
+15
+        }
+16
+    }
+17
+}
+18
+        
+19
+       
